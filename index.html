@@ -6,25 +6,29 @@
   <title>Artexpo</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    html, body { width: 100%; height: 100vh; overflow: hidden; }
-    iframe { 
-      position: fixed; top: 0; left: 0; width: 100%; height: 100%; border: none; 
+    html, body { 
+      width: 100%; 
+      height: 100vh; 
+      overflow: hidden; 
+      background: #000; 
     }
-    /* Hide bottom controls overlay */
-    .controls-overlay {
-      position: fixed; bottom: 0; left: 0; right: 0; height: 60px; 
-      background: linear-gradient(transparent, #000); pointer-events: none; z-index: 10;
-    }
-    /* Optional: Hide right sidebar if appears */
-    .sidebar-hider {
-      position: fixed; right: 0; top: 0; bottom: 0; width: 80px; 
-      background: #000; pointer-events: none; z-index: 10;
+    .embed-container {
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      width: 100%; height: 100%;
+      border: none;
+      border-radius: 0;
+      box-shadow: none;
     }
   </style>
 </head>
 <body>
-  <iframe src="https://www.canva.com/design/DAG0vA7lWk4/UryyDFAZK1v3RD8P937aJg/view?embed" allowfullscreen allow="fullscreen"></iframe>
-  <div class="controls-overlay"></div>
-  <div class="sidebar-hider"></div>
+  <iframe 
+    class="embed-container"
+    src="https://www.canva.com/design/DAG0vA7lWk4/UryyDFAZK1v3RD8P937aJg/view?embed" 
+    loading="lazy"
+    allowfullscreen 
+    allow="fullscreen">
+  </iframe>
 </body>
 </html>
